@@ -13,6 +13,7 @@ const About = () => {
               <h1>Connect</h1>
 
               <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="contact-form" value="contact" />
                 <div className="uk-margin">
                   <label>Your Name: <input className="uk-input" type="text" name="name" /></label>
                 </div>
