@@ -9,6 +9,8 @@ const PROJECTS_QUERY = gql`
         id
         tag_name
       }
+      github
+      demo
       image {
         url
       }
