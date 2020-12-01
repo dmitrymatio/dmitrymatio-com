@@ -1,6 +1,16 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 
 const About = () => {
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes('success=true')) {
+      setSuccess(true);
+    }
+  }, []);
+
+
   return (
     <div>
       <div id="landing-intro" className="uk-section" >
@@ -11,8 +21,12 @@ const About = () => {
             </div>
             <div style={{ width: "60%", padding: "50px" }}>
               <h1>Connect</h1>
-
-              <form name="contact" method="POST" data-netlify="true">
+              {success && (
+                <p style={{ color: 'green' }}>
+                  Successfully submitted form!
+                </p>
+              )}
+              <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/?success=true">
                 <input type="hidden" name="contact-form" value="contact" />
                 <div className="uk-margin">
                   <label>Your Name: <input className="uk-input" type="text" name="name" /></label>
@@ -21,8 +35,9 @@ const About = () => {
                   <label>Your Email: <input className="uk-input" type="email" name="email" /></label>
                 </div>
                 <div>
-                  <label>Message: <textarea className="uk-textarea" rows="9" name="message"></textarea></label>
+                  <label>Message: <textarea className="uk-textarea" rows="6" name="message"></textarea></label>
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <div className="uk-flex uk-flex-between" style={{ marginTop: "25px" }}>
                   <button className="uk-button uk-button-large" style={{ background: "#ff2c55", color: "white", borderColor: "#ff2c55" }} type="submit">Send</button>
                   <ul className="uk-iconnav">
@@ -31,7 +46,6 @@ const About = () => {
                   </ul>
                 </div>
               </form>
-
             </div>
           </div>
         </div>
