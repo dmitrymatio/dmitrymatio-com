@@ -26,8 +26,11 @@ const About = () => {
                   Successfully submitted form!
                 </p>
               )}
-              <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/?success=true">
+              <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/connect?success=true">
                 <input type="hidden" name="contact-form" value="contact" />
+                <p style={{visibility: "hidden", height:"0", width:"0"}}>
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div className="uk-margin">
                   <label>Your Name: <input className="uk-input" type="text" name="name" /></label>
                 </div>
