@@ -13,7 +13,7 @@ const Home = () => {
             <img src="./favicon.png" width="300" height="300" alt="logo" uk-img />
             <h1 style={{ color: "white" }}>Hi, I am <span style={{ color: "#ff2c55" }}>Dmitry</span></h1>
             <h2 style={{ color: "white" }}>I'm a Full-Stack Web Developer currently looking for <span style={{ color: "#ff9e00" }}>Remote</span> and Vancouver based opportunities</h2>
-            <a class="uk-button uk-button-large" style={{ background: "#ff2c55", color: "white", borderColor: "#ff2c55" }} href="/contact">Hire me</a>
+            <a class="uk-button uk-button-large" style={{ background: "#ff2c55", color: "white", borderColor: "#ff2c55" }} href="/connect">Hire me</a>
           </div>
         </div>
       </div>
