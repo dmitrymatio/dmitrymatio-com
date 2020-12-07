@@ -26,28 +26,32 @@ const About = () => {
                   Successfully submitted form!
                 </p>
               )}
-              <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/connect?success=true">
-                <input type="hidden" name="contact-form" value="contact" />
+              <form name="contact" method="POST" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true" action="/connect?success=true">
+                <input type="hidden" name="form-name" value="contact" />
                 <p style={{ visibility: "hidden", height: "0", width: "0" }}>
-                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                  <label htmlFor="bot-field">Don’t fill this out if you're human: </label>
+                  <input name="bot-field" />
                 </p>
-                <div className="uk-margin">
-                  <label>Your Name: <input className="uk-input" type="text" name="name" /></label>
-                </div>
-                <div className="uk-margin">
-                  <label>Your Email: <input className="uk-input" type="email" name="email" /></label>
-                </div>
-                <div>
-                  <label>Message: <textarea className="uk-textarea" rows="6" name="message"></textarea></label>
-                </div>
+                <p className="uk-margin">
+                  <label htmlFor="name">Your Name: </label>
+                  <input className="uk-input" type="text" name="name" />
+                </p>
+                <p className="uk-margin">
+                  <label htmlFor="email">Your Email: </label>
+                  <input className="uk-input" type="email" name="email" />
+                </p>
+                <p>
+                  <label htmlFor="message">Message: </label>
+                  <textarea className="uk-textarea" rows="6" name="message" />
+                </p>
                 <div data-netlify-recaptcha="true"></div>
-                <div className="uk-flex uk-flex-between" style={{ marginTop: "25px" }}>
+                <p className="uk-flex uk-flex-between" style={{ marginTop: "25px" }}>
                   <button className="uk-button uk-button-large" style={{ background: "#ff2c55", color: "white", borderColor: "#ff2c55" }} type="submit">Send</button>
                   <ul className="uk-iconnav">
                     <li><a href="https://www.linkedin.com/in/dmitrymatio/" target="_blank" uk-icon="icon: linkedin; ratio: 2.5"></a></li>
                     <li><a href="https://github.com/dmitrymatio" target="_blank" uk-icon="icon: github-alt; ratio: 2.5"></a></li>
                   </ul>
-                </div>
+                </p>
               </form>
             </div>
           </div>
