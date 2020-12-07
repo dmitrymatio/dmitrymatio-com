@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <div>
-      <div id="landing-intro" className="uk-section" >
+      <div id="landing-intro" className="uk-section" style={{ "min-height": "1000px", "max-height": "100vh" }}>
         <div className="uk-container uk-container-large" style={{ height: "85%" }}>
           <div className="uk-card uk-card-body uk-flex" style={{ background: "#e5e5e5", height: "100%", padding: "0" }}>
             <div style={{ width: "40%", height: "100%", overflow: "hidden" }}>
@@ -28,7 +28,7 @@ const About = () => {
               )}
               <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/connect?success=true">
                 <input type="hidden" name="contact-form" value="contact" />
-                <p style={{visibility: "hidden", height:"0", width:"0"}}>
+                <p style={{ visibility: "hidden", height: "0", width: "0" }}>
                   <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 </p>
                 <div className="uk-margin">

@@ -3,41 +3,41 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div id="landing-intro" className="uk-section" >
-        <div className="uk-container uk-container-large" style={{ height: "85%" }}>
+      <div id="landing-intro" className="uk-section" style={{ "min-height": "1000px", "max-height": "100vh" }}>
+        <div className="uk-container uk-container-large" style={{ height: "90%" }}>
           <div class="uk-card uk-card-body uk-flex" style={{ background: "#e5e5e5", height: "100%", padding: "0" }}>
-            <div style={{ width: "60%", padding: "50px" }}>
-              <h1>About Me</h1>
-              <h3>I'm a Software Developer focused on Web Technology. Graduate of <a href="https://www.bcit.ca/programs/full-stack-web-development-diploma-full-time-7540dipma/">BCIT</a></h3>
-              <p>I’m passionate about technology - not a specific framework or language.
+            <div style={{ width: "70%", padding: "50px" }}>
+              <h1 style={{"font-size": "3rem"}}>About Me</h1>
+              <h3 style={{"font-size": "1.5rem"}}>I'm a Software Developer focused on Web Technology.<br />Graduate of <a href="https://www.bcit.ca/programs/full-stack-web-development-diploma-full-time-7540dipma/">BCIT</a></h3>
+              <p style={{"font-size": "1rem"}}>I’m passionate about technology - not a specific framework or language.
               In this line of work it's about adaptation, and what works best for the project.
               I’m open to learning any stack and I enjoy tailoring elegant solutions to complex problems.
               My motto as a developer is if I am the smartest person in the room, I am in the wrong room.
               </p>
               <table class="uk-table uk-table-responsive">
-                <caption><h3>Technologies</h3></caption>
+                <caption><h3 style={{"font-size": "1.5rem"}}>Technologies</h3></caption>
                 <thead>
                   <tr>
-                    <th>Front End</th>
-                    <th>Back End</th>
-                    <th>Other</th>
+                    <th style={{"font-size": "1.5rem"}}>Front End</th>
+                    <th style={{"font-size": "1.5rem"}}>Back End</th>
+                    <th style={{"font-size": "1.5rem"}}>Other</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>React | Next | Redux</td>
-                    <td>C# | ASP.NET</td>
-                    <td>AWS | Heroku | Netlify | Vercel</td>
+                    <td style={{"font-size": "1rem"}}>React | Next | Redux</td>
+                    <td style={{"font-size": "1rem"}}>C# | ASP.NET</td>
+                    <td style={{"font-size": "1rem"}}>AWS | Heroku | Netlify | Vercel</td>
                   </tr>
                   <tr>
-                    <td>HTML | CSS | JavaScript</td>
-                    <td>Node | Express</td>
-                    <td>Docker | Vagrant</td>
+                    <td style={{"font-size": "1rem"}}>HTML | CSS | JavaScript</td>
+                    <td style={{"font-size": "1rem"}}>Node | Express</td>
+                    <td style={{"font-size": "1rem"}}>Docker | Vagrant</td>
                   </tr>
                   <tr>
-                    <td>Apollo | GraphQL | Axios | REST</td>
-                    <td>MongoDB | PostgreSQL</td>
-                    <td>Design | Business | 3D Modeling</td>
+                    <td style={{"font-size": "1rem"}}>Apollo | GraphQL | Axios | REST</td>
+                    <td style={{"font-size": "1rem"}}>MongoDB | PostgreSQL</td>
+                    <td style={{"font-size": "1rem"}}>Design | Business | 3D Modeling</td>
                   </tr>
                 </tbody>
               </table>
