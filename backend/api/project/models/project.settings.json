@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "project",
-    "description": ""
+    "name": "Project"
   },
   "options": {
     "increments": true,
@@ -11,13 +10,24 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "content": {
+    "Description": {
       "type": "richtext"
     },
-    "image": {
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Thumbnail": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -28,15 +38,11 @@
       "plugin": "upload",
       "required": false
     },
-    "github": {
+    "Github": {
       "type": "string"
     },
-    "demo": {
+    "Demo": {
       "type": "string"
-    },
-    "tags": {
-      "via": "projects",
-      "collection": "tag"
     }
   }
 }
